@@ -1,0 +1,379 @@
+*{
+	padding:0;
+	margin:0;
+}
+body,html{
+	height: 100%;
+}
+.box{
+	height: 100%;
+}
+.box .box-top{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	background:rgba(39,39,39,0.2);
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing:border-box;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index: 5555;
+	text-align: justify;
+}
+.box-top:after{
+	content:"";
+    display: inline-block;
+    height:0;
+    line-height:0;
+    width: 100%;
+}
+/*.iconfont input[type=color]{
+	value:green;
+}*/
+.box .box-bottom{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#fff;
+	/*background:rgba(185,250,57,0.4);*/
+	position: relative;
+}
+.box-top>div{
+	display: inline-block!important;
+	/*float: left;*/
+	font-size:30px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	transition:all .5s;
+}
+.box-top .iconfont>input{
+	background:#fff;
+	border:none;
+}
+.box-top .iconfont:hover{
+	color: #FF1F71;
+	transform:scale(1.2,1.2);
+	-webkit-transform:scale(1.2,1.2);
+}
+.box-bottom .parent-box{
+	position: absolute;
+	top:85px;
+	left:50%;
+	transform:translateX(-50%);
+	z-index: 99999;
+}
+canvas{
+	background: #fff;
+	border:1px solid #FF212E;
+}
+.parent-box .close{
+	width: 30px;
+	height: 30px;
+	color: #272822;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	top:0;
+	right:0;
+	font-size:24px;
+	z-index: 99999;
+	cursor: pointer;
+	transition:all .5s ease;
+}
+.parent-box .close:hover{
+	transform:rotate(180deg);
+}
+#copy{
+	z-index: 6666;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.parent-box #earser{
+	background:url(../images/reare1.png) center center;
+}
+.box-bottom .topic-box{
+	width:100%;
+	height:100%;
+	margin:0px auto;
+}
+.topic-box .topc-b{
+	width: 100%;
+	height: 100%;
+}
+.topic-topic{
+	width: 50px;
+	height:50px;
+	background:#fff;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+	border:1px solid #ddd;
+	font-size: 18px;
+	font-weight: bold;
+	/*color:orange;*/
+	color: #FF1A74;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #ccc;
+	line-height: 22px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 9999;
+}
+.ulu{
+	width: 100px;
+	height: auto;
+	position:fixed;
+	right:20px;
+	bottom:80px;
+	list-style: none;
+	display: none;
+	z-index: 9999;
+	border:1px solid #FF1A74;
+}
+.diab{
+	display: block;
+}
+.topic-topic ul .list{
+	width: 100px;
+	height:100px;
+	overflow: hidden;
+}
+.topic-topic ul .list img{
+	width: 100px;
+	height:80px;
+}
+.topic-topic ul .list:nth-of-type(1){
+	color: #39CB00;
+}
+.topic-topic ul .list:nth-of-type(2){
+	color: #272727;
+}
+.topic-topic ul .list:nth-of-type(3){
+	color: #FF1A74;
+}
+.topic-topic ul .list:nth-of-type(4){
+	color:red;
+}
+.topshow{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	text-align: center;
+	font-size: 200px;
+}
+.topshow .showlist{
+	width: 100%;
+	height: 100%;
+}
+.topshow #show1{
+	background: url(../images/2.jpg) no-repeat center center;
+	background-size: 100% 100%;	
+}
+.topshow #show2{
+	background: url(../images/6.jpg) no-repeat center center;
+	background-size: 100% 100%;	
+}
+.topshow #show3{
+	background: url(../images/5.jpeg) no-repeat center center;
+	background-size: 100% 100%;	
+}
+.topshow #show4{
+	background: url(../images/9.jpg) no-repeat center center;
+	background-size: 100% 100%;	
+}
+.show-top{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.show-top .cloud1{
+	position: absolute;
+	right:-200px;
+	top:50px;
+	animation:cloud 40s linear 10s infinite;
+}
+.show-top .cloud2{
+	position: absolute;
+	right:-500px;
+	animation:cloud 60s linear 20s infinite ;
+}
+.show-top .cloud3{
+	position: absolute;
+	right:-100px;
+	top:40px;
+	animation:cloud 30s linear infinite ;
+}
+.show-top .bao2{
+	position: absolute;
+	left:50px;
+	bottom:400px;
+	animation:up 2s infinite;
+}
+.xin{
+	position:absolute;
+	top:0;
+	color:#fff;
+}
+.show2 .xing{
+	animation:fdsx 2s infinite;
+}
+/*.show2:nth-child(even){
+	animation:fdsxy 2s infinite;
+}*/
+/*@keyframes fdsxy{
+	50%{
+		transform:scale(1.2,1.2);
+	}
+	100%{
+		transform:scale(0.8,0.8);
+		
+	}
+}*/
+@keyframes fdsx{
+	50%{
+		transform:scale(0.8,0.8) rotate(10deg);
+	}
+	100%{
+		transform:scale(1.2,1.2) rotate(-10deg);
+	}
+}
+.show2 .xing:nth-of-type(1){
+	font-size:20px;
+	position: absolute;
+	top:100px;
+	left:600px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(2){
+	font-size:10px;
+	position: absolute;
+	top:254px;
+	left:436px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(3){
+	font-size:14px;
+	position: absolute;
+	top:230px;
+	left:530px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(4){
+	font-size:5px;
+	position: absolute;
+	top:430px;
+	left:330px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(5){
+	font-size:20px;
+	position: absolute;
+	top:530px;
+	left:230px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(6){
+	font-size:18px;
+	position: absolute;
+	top:180px;
+	left:100px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(7){
+	font-size:10px;
+	position: absolute;
+	top:190px;
+	left:230px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(8){
+	font-size:20px;
+	position: absolute;
+	bottom:130px;
+	left:380px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(9){
+	font-size:10px;
+	position: absolute;
+	top:90px;
+	left:480px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(10){
+	font-size:14px;
+	position: absolute;
+	top:290px;
+	left:400px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(11){
+	font-size:16px;
+	position: absolute;
+	bottom:530px;
+	left:680px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(12){
+	font-size:22px;
+	position: absolute;
+	top:90px;
+	left:320px;
+	color: #fff;
+}
+.show2 .xing:nth-of-type(13){
+	font-size:8px;
+	position: absolute;
+	top:230px;
+	left:500px;
+	color: #fff;
+}
+@keyframes up{
+	0%{
+		bottom:400px;
+	}
+	100%{
+		bottom:410px;
+	}
+}
+-webkit-@keyframes up{
+	0%{
+		bottom:400px;
+	}
+	100%{
+		bottom:410px;
+	}
+}
+@keyframes cloud{
+	100%{
+		right:100%;
+	}
+}
+-webkit-@keyframes cloud{
+	100%{
+		right:100%;
+	}
+}
+@media Screen and (max-width: 1000px){
+	.box .box-top{
+		height:80px;
+		line-height: 35px;
+	}
+	.box .box-top>div{
+		font-size:26px; 
+	}
+	.topic-topic ul .list{
+		width: 80px;
+		height: 80px;
+	}
+	.topic-topic ul{
+		right:0px;
+	}
+}

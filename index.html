@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	
+</head>
+<body>
+	<div class="box">
+		<div class="box-top">
+			<div class="iconfont add" title="新建">&#xe605;</div>
+			<div class="iconfont save"title="保存">&#xe600;</div>
+			<div class="iconfont back"title="撤销">&#xe601;</div>
+			<div class="iconfont call"title="前进">&#xe614;</div>
+			<div class="iconfont clear"title="清空画布">&#xe60e;</div>
+
+
+			<div class="iconfont"role="line"title="直线">&#xe604;</div>
+			<div class="iconfont"role="rect"title="矩形">&#xe60b;</div>
+			<div class="iconfont"role="rounded"title="圆角矩形">&#xe608;</div>
+			<div class="iconfont"role="circle"title="圆">&#xe60a;</div>
+			<div class="iconfont"role="poly"title="多边形">&#xe60c;</div>
+			<div class="iconfont"role="polystar"title="多角形">&#xe613;</div>
+			
+
+
+			<div class="iconfont"role="pencil"title="铅笔">&#xe606;</div>
+			<div class="iconfont"role="earser"title="橡皮擦">&#xe610;</div>
+		
+
+
+			<div class="iconfont"role="fill"title="填充">&#xe615;</div>
+			<div class="iconfont"role="stroke"title="描边">&#xe607;</div>
+			<div class="iconfont"role="fillStyle"title="填充颜色">&#xe60f;
+				<input type="color">
+			</div>
+			<div class="iconfont"role="strokeStyle"title="描边颜色">&#xe60d;
+				<input type="color">
+			</div>
+		</div>
+		<div class="box-bottom">
+			<div class="parent-box">
+				
+				
+			</div>
+			<div class="topic-box" ng-app="myapp">
+				<div class="topc-b" ng-controller="ctrl">
+					<div class="topic-topic">Topic 主题
+						<ul class="ulu">
+							<li class="list" ng-click="item='i1'">清新醉
+								<img src="images/2.jpg" alt="">
+							</li>
+							<li class="list" ng-click="item='i2'">炫酷黑
+								<img src="images/6.jpg" alt="">
+							</li>
+							<li class="list" ng-click="item='i3'">卡通萌
+								<img src="images/5.jpeg" alt="">
+							</li>
+							<li class="list" ng-click="item='i4'">爱❤情
+								<img src="images/9.jpg" alt="">
+							</li>
+						</ul>	
+					</div>
+					<div class="topshow" ng-switch="item">
+						<div class="showlist" id="show1" ng-switch-when="i1">
+							<div class="show-top">
+								<img src="images/yun1.png" alt="" class="cloud1">
+								<img src="images/yun2.png" alt="" class="cloud2">
+								<img src="images/yun3.png" alt="" class="cloud3">
+							</div>
+						</div>
+						<div class="showlist" id="show2" ng-switch-when="i2">
+							<div class="show-top show2">
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+								<div class="xing">★</div>
+							</div>
+						</div>
+						<div class="showlist"  id="show3" ng-switch-when="i3">
+							<div class="show-top">
+								<img src="images/bao2.png" alt="" class="bao2">
+							</div>
+						</div>
+						<div class="showlist" id="show4" ng-switch-when="i4">
+							<div class="show-top show4">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/palette.js"></script>
+<script src="js/index.js"></script>
+<script src="js/angular.min.js"></script>
+<script>
+	var app=angular.module("myapp",[]);
+	 app.controller("ctrl",function($scope){
+	 		$scope.item="i1";  //初始化;
+
+		});
+</script>
+</html>
